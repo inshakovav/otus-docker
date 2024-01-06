@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
     @GetMapping("/health")
-    String getStatus() {
-        return "All is OK";
+    StatusDTO getStatus() {
+        StatusDTO statusDTO = StatusDTO.builder()
+                .status("OK")
+                .build();
+
+        return statusDTO;
     }
 }
