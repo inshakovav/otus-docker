@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
-    @GetMapping("/health")
+    @GetMapping("/healthcheck")
     StatusDTO getStatus() {
         StatusDTO statusDTO = StatusDTO.builder()
                 .status("OK")
